@@ -48,6 +48,25 @@ Synopsis: turn on TV, bedroom light, bedroom ceiling fan, and bathroom lights.
 
 ## How to use this
 
-You will want to clone this repository and modify it (likely heavily modify it) to suit your needs.
+Back up the macros.js file and edit it to suit your needs.
+
+If you are using the docker version, you will want to keep the
+macros.js file somewhere in your host file system and use the -v
+switch to map it into the container's filesystem.
 
 
+```
+$ docker run \
+    -d \
+    -v /path/to/macros.js:/home/app/macros.js \
+    --rm \
+    --name="macro-microservice"
+    macro-microservice
+```
+
+THen you can edit the macros.js file on the host and restart
+the container as you need:
+
+```
+$ docker restart macro-microservice
+```

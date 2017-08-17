@@ -1,0 +1,32 @@
+{
+  "name": "macro-microservice",
+  "version": "1.0.0",
+  "description": "Microservice to run macros",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoboDomo/macro-microservice.git"
+  },
+  "keywords": [
+    "RoboDomo",
+    "Home",
+    "Automation",
+    "Microservice",
+    "Scenes"
+  ],
+  "author": "Michael Schwartz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoboDomo/macro-microservice/issues"
+  },
+  "homepage": "https://github.com/RoboDomo/macro-microservice#readme",
+  "dependencies": {
+    "autelis-microservice": "github:robodomo/autelis-microservice",
+    "debug": "^3.0.0",
+    "mqtt": "^2.11.0"
+  }
+}
