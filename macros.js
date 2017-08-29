@@ -36,10 +36,12 @@ module.exports = {
         {type: 'mqtt', topic: 'smartthings/Bathroom Light/switch/set', payload: 'off'},
     ],
     'Bedroom On':   [
-        {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'Watch TV'},
+        {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'Watch FIOS'},
+        {type: 'mqtt', topic: 'tivo/tivo-bolt/set/', payload: 'LIVETV'},
         {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
         {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
         {type: 'macro', name: 'Bathroom On'},
+        {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'Watch FIOS'},
     ],
     'Bedroom Off':  [
         {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'PowerOff'},
@@ -56,13 +58,15 @@ module.exports = {
         {type: 'macro', name: 'Bedroom Off'},
     ],
     'Bedtime':      [
+        {type: 'mqtt', topic: 'harmony/harmony-hub/set/activity', payload: 'PowerOff'},
+        {type: 'mqtt', topic: 'harmony/harmony-hub/set/activity', payload: 'PowerOff'},
+        {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'PowerOff'},
         {type: 'mqtt', topic: 'smartthings/Ceiling Fan/switch/set', payload: 'off'},
         {type: 'mqtt', topic: 'smartthings/Ceiling Fan Light/switch/set', payload: 'on'},
         {type: 'macro', name: 'Kitchen On'},
         {type: 'macro', name: 'Outside Off'},
         {type: 'macro', name: 'Office Off'},
         {type: 'macro', name: 'Bedroom On'},
-        {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'Watch TV'},
         {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '75'}
     ],
     'Good Night':   [
@@ -73,7 +77,7 @@ module.exports = {
         {type: 'macro', name: 'Office Off'},
         {type: 'macro', name: 'Bathroom Off'},
         {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
-        {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'off'},
+        {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
         {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '75'}
     ],
     'TV Mood':      [
