@@ -23,11 +23,31 @@ module.exports = {
     {type: 'mqtt', topic: 'smartthings/Porch Light/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Outside Lights/switch/set', payload: 'off'},
   ],
-  'Office on': [
+  'Office On': [
     {type: 'mqtt', topic: 'bravia/sony-810c/set/power', payload: 'on'},
+    { type: 'mqtt', topic: 'smartthings/Office Light/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Office Fan/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Light/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Fan/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Switch/switch/set', payload: 'on' },
   ],
   'Office Off': [
     {type: 'mqtt', topic: 'bravia/sony-810c/set/power', payload: 'off'},
+    { type: 'mqtt', topic: 'smartthings/Office Light/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Office Fan/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Light/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Fan/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Switch/switch/set', payload: 'off' },
+  ],
+  'Back Room On': [
+    { type: 'mqtt', topic: 'smartthings/Back Room Light/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Fan/switch/set', payload: 'on' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Switch/switch/set', payload: 'on' },
+  ],
+  'Back Room Off': [
+    { type: 'mqtt', topic: 'smartthings/Back Room Light/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Fan/switch/set', payload: 'off' },
+    { type: 'mqtt', topic: 'smartthings/Back Room Switch/switch/set', payload: 'off' },
   ],
   'Bathroom On': [
     {type: 'mqtt', topic: 'smartthings/Bathroom Light/switch/set', payload: 'on'},
@@ -36,14 +56,14 @@ module.exports = {
     {type: 'mqtt', topic: 'smartthings/Bathroom Light/switch/set', payload: 'off'},
   ],
   'Bedroom On': [
-    {type: 'mqtt', topic: 'bravia/sony-850c/set/power', payload: 'on'},
+    {type: 'mqtt', topic: 'bravia/sony-850c/set/command', payload: 'WakeUp'},
     {type: 'mqtt', topic: 'tivo/tivo-bolt/set/', payload: 'LIVETV'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
     {type: 'macro', name: 'Bathroom On'},
   ],
   'Bedroom Off': [
-    {type: 'mqtt', topic: 'bravia/sony-850c/set/power', payload: 'off'},
+    {type: 'mqtt', topic: 'bravia/sony-850c/set/command', payload: 'PowerOff'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'off'},
     {type: 'macro', name: 'Bathroom Off'},
@@ -65,6 +85,7 @@ module.exports = {
     {type: 'macro', name: 'Kitchen On'},
     {type: 'macro', name: 'Outside Off'},
     {type: 'macro', name: 'Office Off'},
+    {type: 'macro', name: 'Back Room Off'},
     {type: 'macro', name: 'Bedroom On'},
     {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '75'}
   ],
@@ -74,6 +95,7 @@ module.exports = {
     {type: 'macro', name: 'Kitchen Off'},
     {type: 'macro', name: 'Outside Off'},
     {type: 'macro', name: 'Office Off'},
+    {type: 'macro', name: 'Back Room Off'},
     {type: 'macro', name: 'Bathroom Off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
