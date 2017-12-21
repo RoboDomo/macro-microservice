@@ -88,7 +88,7 @@ module.exports = {
     {type: 'macro', name: 'Office Off'},
     {type: 'macro', name: 'Back Room Off'},
     {type: 'macro', name: 'Bedroom On'},
-    {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '75'}
+    {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '69'}
   ],
   'Good Night': [
     {type: 'macro', name: 'Spa Off'},
@@ -100,7 +100,7 @@ module.exports = {
     {type: 'macro', name: 'Bathroom Off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
-    {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '75'}
+    {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '69'}
   ],
   'TV Mood': [
     {type: 'mqtt', topic: 'smartthings/Ceiling Fan/switch/set', payload: 'on'},
@@ -128,6 +128,7 @@ module.exports = {
   ],
   'Warm Spa': [
     {type: 'autelis', topic: 'spa', payload: 'on'},
+    {type: 'autelis', topic: 'pump', payload: 'on'},
     {type: 'autelis', topic: 'spaHeat', payload: 'on'},
     {type: 'autelis', topic: 'jet', payload: 'off'},
     {type: 'autelis', topic: 'blower', payload: 'off'},
@@ -147,10 +148,12 @@ module.exports = {
   ],
   'Spa Off': [
     {type: 'autelis', topic: 'spa', payload: 'off'},
+    {type: 'autelis', topic: 'pump', payload: 'off'},
     {type: 'autelis', topic: 'spaHeat', payload: 'off'},
     {type: 'autelis', topic: 'jet', payload: 'off'},
     {type: 'autelis', topic: 'blower', payload: 'off'},
     {type: 'autelis', topic: 'spaLight', payload: 'off'},
+    {type: 'autelis', topic: 'poolLight', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Outside Light/switch/set', payload: 'off'},
   ]
 }
