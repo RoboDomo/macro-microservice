@@ -31,11 +31,13 @@ module.exports = {
   ],
   'Office On': [
     {type: 'macro', name: 'Office TV On'},
+    { type: 'mqtt', topic: 'smartthings/Office Dimmer/switch/set', payload: 'on' },
     { type: 'mqtt', topic: 'smartthings/Office Light/switch/set', payload: 'on' },
     { type: 'mqtt', topic: 'smartthings/Office Fan/switch/set', payload: 'on' },
   ],
   'Office Off': [
     {type: 'macro', name: 'Office TV Off'},
+    { type: 'mqtt', topic: 'smartthings/Office Dimmer/switch/set', payload: 'off' },
     { type: 'mqtt', topic: 'smartthings/Office Light/switch/set', payload: 'off' },
     { type: 'mqtt', topic: 'smartthings/Office Fan/switch/set', payload: 'off' },
   ],
@@ -98,6 +100,9 @@ module.exports = {
     {type: 'macro', name: 'Office Off'},
     {type: 'macro', name: 'Back Room Off'},
     {type: 'macro', name: 'Bathroom Off'},
+    {type: 'mqtt', topic: 'smartthings/Porch Light/switch/set', payload: 'off'},
+    {type: 'mqtt', topic: 'smartthings/Outside Lights/switch/set', payload: 'off'},
+    {type: 'mqtt', topic: 'smartthings/Entryway Lights/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '69'}
