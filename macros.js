@@ -11,9 +11,11 @@ module.exports = {
   ],
   'Kitchen On': [
     {type: 'mqtt', topic: 'smartthings/Kitchen Lights/switch/set', payload: 'on'},
+    {type: 'mqtt', topic: 'smartthings/Kitchen Sink Light/switch/set', payload: 'on'},
   ],
   'Kitchen Off': [
     {type: 'mqtt', topic: 'smartthings/Kitchen Lights/switch/set', payload: 'off'},
+    {type: 'mqtt', topic: 'smartthings/Kitchen Sink Light/switch/set', payload: 'off'},
   ],
   'Outside On': [
     {type: 'mqtt', topic: 'smartthings/Porch Light/switch/set', payload: 'on'},
@@ -61,12 +63,14 @@ module.exports = {
     {type: 'mqtt', topic: 'bravia/sony-850c/set/command', payload: 'WakeUp'},
     {type: 'mqtt', topic: 'tivo/tivo-bolt/set/', payload: 'LIVETV'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
+    {type: 'mqtt', topic: 'smartthings/Bedroom Lamp/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
     {type: 'macro', name: 'Bathroom On'},
   ],
   'Bedroom Off': [
     {type: 'mqtt', topic: 'bravia/sony-850c/set/command', payload: 'PowerOff'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
+    {type: 'mqtt', topic: 'smartthings/Bedroom Lamp/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'off'},
     {type: 'macro', name: 'Bathroom Off'},
   ],
@@ -104,6 +108,7 @@ module.exports = {
     {type: 'mqtt', topic: 'smartthings/Outside Lights/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Entryway Lights/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'off'},
+    {type: 'mqtt', topic: 'smartthings/Bedroom Lamp/switch/set', payload: 'off'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'nest/Falsetto/Hallway Thermostat/set/target_temperature_f', payload: '69'}
   ],
@@ -129,7 +134,7 @@ module.exports = {
   ],
   'TV Resume': [
     {type: 'macro', name: 'Resume TV'},
-    {type: 'macro', name: 'TV Mood'},
+    {type: 'mqtt', topic: 'smartthings/Ceiling Fan Light/switch/set', payload: 'off'},
   ],
   'Warm Spa': [
     {type: 'autelis', topic: 'spa', payload: 'on'},
