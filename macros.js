@@ -62,7 +62,7 @@ module.exports = {
   'Bedroom On': [
     {type: 'mqtt', topic: 'bravia/sony-850c/set/command', payload: 'WakeUp'},
     {type: 'mqtt', topic: 'tivo/tivo-bolt/set/', payload: 'LIVETV'},
-    {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
+    //    {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Lamp/switch/set', payload: 'on'},
     {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
     {type: 'macro', name: 'Bathroom On'},
