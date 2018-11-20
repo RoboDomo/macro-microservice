@@ -255,7 +255,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "75"
+      payload: "72"
     }
   ],
   "Good Night": [
@@ -299,7 +299,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "75"
+      payload: "72"
     }
   ],
   "Good Morning": [
@@ -316,7 +316,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "82"
+      payload: "79"
     }
   ],
   "TV Mood": [
