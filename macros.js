@@ -167,6 +167,7 @@ module.exports = {
     { type: "mqtt", topic: "bravia/sony-850c/set/command", payload: "WakeUp" },
     { type: "mqtt", topic: "tivo/tivo-bolt/set/", payload: "LIVETV" },
     { type: "mqtt", topic: "denon/denon-x2100w/set/command", payload: "PWON" },
+    { type: "mqtt", topic: "denon/denon-x2100w/set/command", payload: "Z2OFF" },
     //    {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
     {
       type: "mqtt",
