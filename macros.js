@@ -306,12 +306,17 @@ module.exports = {
   "Good Morning": [
     {
       type: "mqtt",
-      topic: "smartthings/Ceiling Fan/switch/set",
+      topic: "smartthings/Bedroom Fan/switch/set",
       payload: "off"
     },
     {
       type: "mqtt",
       topic: "smartthings/Office Dimmer/switch/set",
+      payload: "on"
+    },
+    {
+      type: "mqtt",
+      topic: "smartthings/Kitchen Lights/switch/set",
       payload: "on"
     },
     {
