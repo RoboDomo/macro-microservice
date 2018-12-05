@@ -225,21 +225,6 @@ module.exports = {
   Bedtime: [
     {
       type: "mqtt",
-      topic: "harmony/harmony-hub/set/activity",
-      payload: "PowerOff"
-    },
-    {
-      type: "mqtt",
-      topic: "harmony/harmony-hub/set/activity",
-      payload: "PowerOff"
-    },
-    {
-      type: "mqtt",
-      topic: "harmony/harmony-hub2/set/activity",
-      payload: "PowerOff"
-    },
-    {
-      type: "mqtt",
       topic: "smartthings/Ceiling Fan/switch/set",
       payload: "off"
     },
@@ -256,7 +241,22 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "72"
+      payload: "60"
+    },
+    {
+      type: "mqtt",
+      topic: "harmony/harmony-hub/set/activity",
+      payload: "PowerOff"
+    },
+    {
+      type: "mqtt",
+      topic: "harmony/harmony-hub/set/activity",
+      payload: "PowerOff"
+    },
+    {
+      type: "mqtt",
+      topic: "harmony/harmony-hub2/set/activity",
+      payload: "PowerOff"
     }
   ],
   "Good Night": [
@@ -304,11 +304,11 @@ module.exports = {
     }
   ],
   "Good Morning": [
-    {
-      type: "mqtt",
-      topic: "smartthings/Bedroom Fan/switch/set",
-      payload: "off"
-    },
+    //    {
+    //      type: "mqtt",
+    //      topic: "smartthings/Bedroom Fan/switch/set",
+    //      payload: "off"
+    //    },
     {
       type: "mqtt",
       topic: "smartthings/Office Dimmer/switch/set",
@@ -322,7 +322,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "79"
+      payload: "74"
     }
   ],
   "TV Mood": [
