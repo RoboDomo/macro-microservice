@@ -300,7 +300,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "72"
+      payload: "65"
     }
   ],
   "Good Morning": [
