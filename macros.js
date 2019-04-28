@@ -209,6 +209,23 @@ module.exports = {
     },
     { type: "macro", name: "Bathroom Off" }
   ],
+  "Hall Bathroom Off": [
+    {
+      type: "mqtt",
+      topic: "smartthings/Hall Bath Dimmer/switch/set",
+      payload: "off"
+    },
+    {
+      type: "mqtt",
+      topic: "smartthings/Hall Bath Lights/switch/set",
+      payload: "PowerOff"
+    },
+    {
+      type: "mqtt",
+      topic: "smartthings/Hall Bath Fan/switch/set",
+      payload: "PowerOff"
+    }
+  ],
   "All Off": [
     { type: "macro", name: "Spa Off" },
     { type: "macro", name: "Theater Off" },
@@ -216,6 +233,7 @@ module.exports = {
     { type: "macro", name: "Outside Off" },
     { type: "macro", name: "Office Off" },
     { type: "macro", name: "Bedroom Off" },
+    { type: "macro", name: "Hall Bathroom Off" },
     {
       type: "mqtt",
       topic: "smartthings/Entryway Lights/switch/set",
@@ -233,7 +251,6 @@ module.exports = {
       topic: "smartthings/Ceiling Fan Light/switch/set",
       payload: "on"
     },
-    { type: "macro", name: "Kitchen On" },
     { type: "macro", name: "Outside Off" },
     { type: "macro", name: "Office Off" },
     { type: "macro", name: "Back Room Off" },
@@ -241,7 +258,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "60"
+      payload: "72"
     },
     {
       type: "mqtt",
@@ -257,7 +274,8 @@ module.exports = {
       type: "mqtt",
       topic: "harmony/harmony-hub2/set/activity",
       payload: "PowerOff"
-    }
+    },
+    { type: "macro", name: "Kitchen On" }
   ],
   "Good Night": [
     { type: "macro", name: "Spa Off" },
@@ -300,7 +318,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "65"
+      payload: "72"
     }
   ],
   "Good Morning": [
@@ -322,7 +340,7 @@ module.exports = {
     {
       type: "mqtt",
       topic: "nest/Falsetto/Hallway Thermostat/set/target_temperature_f",
-      payload: "74"
+      payload: "87"
     }
   ],
   "TV Mood": [
@@ -352,10 +370,18 @@ module.exports = {
     { type: "macro", name: "TV Mood" }
   ],
   "Pause TV": [
-    { type: "mqtt", topic: "harmony/harmony-hub/set/command", payload: "Pause" }
+    {
+      type: "mqtt",
+      topic: "harmony/harmony-hub/set/device/57903116",
+      payload: "Pause"
+    }
   ],
   "Resume TV": [
-    { type: "mqtt", topic: "harmony/harmony-hub/set/command", payload: "Play" }
+    {
+      type: "mqtt",
+      topic: "harmony/harmony-hub/set/device/57903116",
+      payload: "Play"
+    }
   ],
   "TV Break": [
     { type: "macro", name: "Pause TV" },
