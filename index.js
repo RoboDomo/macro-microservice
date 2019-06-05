@@ -4,7 +4,7 @@ const debug = require("debug")("macros"),
   mqtt = require("mqtt"),
   autelis = require("autelis-microservice/config");
 
-const MQTT_HOST = process.env.MQTT_HOST || "mqtt://ha",
+const MQTT_HOST = process.env.MQTT_HOST || "mqtt://robodomo",
   topicRoot = process.env.TOPIC_ROOT || "macros";
 
 // Edit the macros.js file to suit your macro needs/definitions
