@@ -39,7 +39,6 @@ Synopsis: turn on TV, bedroom light, bedroom ceiling fan, and bathroom lights.
 
 ```javascript
         'Bedroom On': [
-            {type: 'mqtt', topic: 'harmony/harmony-hub2/set/activity', payload: 'Watch TV'},
             {type: 'mqtt', topic: 'smartthings/Bedroom Light/switch/set', payload: 'on'},
             {type: 'mqtt', topic: 'smartthings/Bedroom Fan/switch/set', payload: 'on'},
             {type: 'macro', name: 'Bathroom On'},
@@ -48,12 +47,8 @@ Synopsis: turn on TV, bedroom light, bedroom ceiling fan, and bathroom lights.
 
 ## How to use this
 
-Back up the macros.js file and edit it to suit your needs.
-
-If you are using the docker version, you will want to keep the
-macros.js file somewhere in your host file system and use the -v
-switch to map it into the container's filesystem.
-
+Edit your macros in your fork of the config microservice repository and restart the config microservice.  This will
+store your macros.js in MongoDB.
 
 ```
 $ docker run \

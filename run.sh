@@ -4,4 +4,4 @@ docker run \
     -d \
     --rm \
     --name="macro-microservice" \
-    macro-microservice
+    robodomo/macro-microservice
