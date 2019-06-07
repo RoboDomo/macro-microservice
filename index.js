@@ -1,20 +1,19 @@
 process.env.DEBUG = "macros";
+process.title = "macro-microservice";
 
 const debug = require("debug")("macros"),
-  mqtt = require("mqtt"),
-  autelis = require("autelis-microservice/config");
+  HostBase = require("microservice-core/HostBase"),
+  mqtt = require("mqtt");
+//  autelis = require("autelis-microservice/config");
 
 const MQTT_HOST = process.env.MQTT_HOST || "mqtt://robodomo",
   topicRoot = process.env.TOPIC_ROOT || "macros";
 
 // Edit the macros.js file to suit your macro needs/definitions
-const macros = require("./macros");
+//const macros = require("./macros");
 
-const runMacro = async (client, name) => {
-  const macro = macros[name],
-    deviceMap = autelis.autelis.controllers[0].deviceMap;
-
-  debug("runMacro", name);
+const runMacro = async (client, topic, macro, deviceMap) => {
+  debug("runMacro");
   return new Promise(async resolve => {
     for (const key in macro) {
       const step = macro[key],
@@ -28,16 +27,8 @@ const runMacro = async (client, name) => {
           client.publish(topic, payload);
           break;
         case "autelis":
-          debug(
-            "autelis",
-            topic,
-            payload,
-            `${autelis.mqtt.topic}/set/${deviceMap.forward[topic]}`
-          );
-          client.publish(
-            `${autelis.mqtt.topic}/set/${deviceMap.forward[topic]}`,
-            payload
-          );
+          debug("autelis", topic, payload, `${topic}/set/${deviceMap[topic]}`);
+          client.publish(`${topic}/set/${deviceMap[topic]}`, payload);
           setTimeout(() => {
             resolve();
           }, 1000);
@@ -53,6 +44,10 @@ const runMacro = async (client, name) => {
 };
 
 async function main() {
+  const Config = await HostBase.config(),
+    macros = await HostBase.getSetting("macros"),
+    autelis = Config.autelis;
+
   const run_topic = topicRoot + "/run/",
     list_topic = topicRoot + "/list",
     client = mqtt.connect(MQTT_HOST);
@@ -71,7 +66,13 @@ async function main() {
         client.publish(list_topic, JSON.stringify(Object.keys(macros)));
       } else {
         debug("runMacro", payload);
-        await runMacro(client, payload);
+        //        await runMacro(client, Config, macros, payload, autelis);
+        await runMacro(
+          client,
+          topic,
+          macros[payload],
+          autelis.deviceMap.forward
+        ); // payload is macro name
       }
     });
   });
