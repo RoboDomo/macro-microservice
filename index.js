@@ -1,5 +1,5 @@
 process.env.DEBUG = "macros";
-process.title = "macro-microservice";
+process.title = process.env.TITLE || "macro-microservice";
 
 const debug = require("debug")("macros"),
   HostBase = require("microservice-core/HostBase"),

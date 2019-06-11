@@ -1,0 +1,10 @@
+**/node_modules
+**/Dockerfile
+**/.gitignore
+**/.git
+**/.DS_Store
+**/README.md
+**/examples
+**/doc
+**/*.md
+
