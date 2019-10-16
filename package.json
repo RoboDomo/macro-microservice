@@ -4,7 +4,7 @@
   "description": "Microservice to run macros",
   "main": "index.js",
   "scripts": {
-    "start": "forever ./index.js",
+    "start": "./node_modules/.bin/forever ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/RoboDomo/macro-microservice#readme",
   "dependencies": {
     "autelis-microservice": "github:robodomo/autelis-microservice",
-    "debug": "^3.1.0"
+    "debug": "^3.1.0",
+    "forever": "^1.0.0"
   }
 }

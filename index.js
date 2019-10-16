@@ -25,19 +25,19 @@ const runMacro = async (client, topic, macros, name, deviceMap) => {
         case "mqtt":
           debug("macro mqtt", topic, payload);
           if (step.defer) {
-            setTimeout(() => {
-              client.publish(topic, payload);
+            setTimeout(async () => {
+              await client.publish(topic, payload);
             }, step.defer);
           } else {
-            client.publish(topic, payload);
+            await client.publish(topic, payload);
           }
           break;
         case "autelis":
           debug("autelis", topic, payload, `${topic}/set/${deviceMap[topic]}`);
-          client.publish(`${topic}/set/${deviceMap[topic]}`, payload);
+          await client.publish(`${topic}/set/${deviceMap[topic]}`, payload);
           setTimeout(() => {
             resolve();
-          }, 1000);
+          }, 10);
           break;
         case "macro":
           debug("macro ", step.name);
@@ -78,7 +78,7 @@ async function main() {
 
       if (payload === "list") {
         debug("list", Object.keys(macros));
-        client.publish(list_topic, JSON.stringify(Object.keys(macros)));
+        await client.publish(list_topic, JSON.stringify(Object.keys(macros)));
       } else {
         //        debug("runMacro", payload);
         //        await runMacro(client, Config, macros, payload, autelis);
