@@ -27,7 +27,7 @@
   "homepage": "https://github.com/RoboDomo/macro-microservice#readme",
   "dependencies": {
     "autelis-microservice": "github:robodomo/autelis-microservice",
-    "debug": "^3.1.0",
-    "forever": "^1.0.0"
+    "debug": "^4.3.1",
+    "forever": "^3.0.4"
   }
 }
